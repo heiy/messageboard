@@ -7,29 +7,20 @@
                 <legend>Message record</legend>
         </fieldset>
         </form>
-        <table border="1" width="600px"  height="200px">
-         <caption>Message Board</caption>
-         <tr>
-             <th>Username</th>
-             <td><input type="text"  style="width:510px" ></td>
-         </tr>
-         <tr>
-             <th>Title</th>
-             <td><input type="text" style="width:510px"></td>
-         </tr>
-         <tr>
-             <th height="80">Content</th>
-             <td><input type="text"style="width:510px;height:80px" ></td>
-         </tr>
-         <tr>
-             <th>Date</th>
-             <th><button type="button">Obtain</button></th>
-         </tr>
-         <tr>
-             <th><button type="button">submit</button></th>
-             <th><button type="button"> Reset</button></th>
-         </tr>
-        </table>
+        <form action="lyb.php" method="post">
+            <fieldset style="width:570px;height: 240px"  align="center">
+                <legend>Message Board</legend>
+             Username
+            <input type="text" name="Username" >
+            <br><br>
+             Title
+            <input type="text" name="Title" style="width:510px">
+            <br><br>
+            Content
+            <input type="text"  name="Content" style="width:510px;height:80px" >
+            <br><br>
+             <input type="submit" id="submit"  value="submit">
+             <button type="button"> Reset</button>
     </body>
 </html>
             

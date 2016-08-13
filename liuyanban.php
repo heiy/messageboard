@@ -2,10 +2,10 @@
     <head>Welcome to the Message Board</head>
     <hr />
     <body>
-        <form>
+        <form action="xg.php"  method="post">
             <fieldset style="width:570px;height: 180px"  align="center">
                 <legend>Message record</legend>
-                <?php
+<?php
         $con = mysql_connect("127.0.0.1","root","");
         mysql_select_db("my_lyb");
         $sql="select * from ly";
@@ -14,6 +14,7 @@ echo "<table border=1><tr>";
 while($field = mysql_fetch_field($result))
 {
     echo "<td>&nbsp;".$field->name."&nbsp;</td>";
+
 }
 echo"</tr>";
 while($rows = mysql_fetch_row($result))
@@ -21,6 +22,9 @@ while($rows = mysql_fetch_row($result))
     echo "<tr>";
     for($i = 0; $i < count($rows); $i++)
         echo "<td>&nbsp;".$rows[$i]."</td>";
+            echo"<td><button type='submit'>modify</button></td>";
+        echo"<td><button type='submit' formaction='sc.php'>delete</button></td>";
+
 }
 echo "</tr></table>";
 ?>

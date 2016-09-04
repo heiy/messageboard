@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$Username=$_POST['Username'];
 	$Password=$_POST['Password'];
 	$con=mysql_connect("127.0.0.1","root","");
@@ -11,9 +11,9 @@
 	$news=mysql_fetch_assoc($result);
 	if($news['Usersname']==$_POST['Username'] and $news['Parsword']==$_POST['Parsword']) {
 		echo "log in success ";
-		echo "<a href='/page/messageboard.php'>login</a>";
+		echo "<a href='/messageboard/old_src/page/messageboard.php'>login</a>";
 	}else{
 		echo "Username is wrong or Password is worng ";
-		echo "<a href='login.php'>return</a>";
+		echo "<a href='/messageboard/old_src/page/login.php'>return</a>";
 	}
 ?>

@@ -1,11 +1,11 @@
 <?php
-	include "../common.php";
-?>
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<body bgcolor="#E8FFE8" text="#000000"  topmargin="260">
 	<div align="center">
-		<form action="<?php echo $old_base_url;?>/function/judge/login.php" method="post">
+	<form>
 	<fieldset style="width:300px;height: 150px"  align="center">
 	<legend>LOG IN</legend>
 	<br> <br>    
@@ -16,10 +16,9 @@
 	<input type="password" name="Password" placeholder="Password" required/>
 	<br> <br> 
 	<input type="submit" id="submit"  value="login">
-	<input type="button" onclick="window.location.href='<?php echo $old_base_url;?>/page/register.php'" value="register">
+	<input type="button"  value="register" onclick="window.location.href='register'">
 	</fieldset>
 	</form>
 	</div>
 	</body>
-</html>
-
+</html>	

@@ -1,11 +1,11 @@
 <?php
-	include "../common.php";
+defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <html> 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<body bgcolor="#E8FFE8" text="#000000"  topmargin="240">
 	<div align="center">
-		<form action="<?php echo $old_base_url;?>/function/insert/register.php" method="post">
+		<form>
 	<fieldset style="width:400px;height: 200px"  align="center">
 	<legend>Register</legend>
 	<br> <br>    
@@ -24,4 +24,3 @@
 	</div>  
 	</body>
 </html>
-

@@ -19,7 +19,7 @@
         mysql_query($sql,$con);
 
         mysql_select_db("my_lyb", $con);
-        $sql = "CREATE TABLE Ly 
+        $sql = "CREATE TABLE msg 
             (
                Username varchar(15),
                Title text(15),

@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<body bgcolor="#E8FFE8" text="#000000"  topmargin="260">
 	<div align="center">
-	<form>
+	<form action='/messageboard/src/application/controllers/judge.php' method='post'>
 	<fieldset style="width:300px;height: 150px"  align="center">
 	<legend>LOG IN</legend>
 	<br> <br>    

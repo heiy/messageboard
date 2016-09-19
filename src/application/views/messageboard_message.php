@@ -4,17 +4,31 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<body bgcolor="#E8FFE8" text="#000000"  topmargin="0">
 	<div align="center">
-	<form>
+	<form action='' m>
 	<fieldset style="width:570px;height: 240px"  align="center">
 	<legend>Message record</legend>
-	<?php echo $title; ?>
-	<?php foreach ($msg as $msg_item): ?>
-	<?php echo $msg_item['title']; ?>
-    <div class="main">
-	<?php echo $msg_item['text']; ?>
-    </div>
-    <p><a href="<?php echo site_url('msg/'.$msg_item['id']); ?>">View article</a></p>
-	<?php endforeach; ?>
+<?php
+	echo "<table border='1' align='center'><tr>";
+	echo "<tr>";	
+    echo "<td>Username</td>";
+    echo "<td>Title</td>";
+    echo "<td>Content</td>";
+	echo "<td>Date</td>";
+	echo"<td>操作</td>";
+	echo"<td>操作</td>";
+	$query = $this->db->query('SELECT Username, Title, Content,Date FROM msg');
+	foreach ($query->result() as $row)
+{
+	echo "<tr>";	
+    echo "<td>$row->Username</td>";
+    echo "<td>$row->Title</td>";
+    echo "<td>$row->Content</td>";
+	echo "<td>$row->Date</td>";
+	echo"<td><button type='submit' >modify</button></td>";
+	echo"<td><button type='submit' >delete</button></td>";
+}
+	echo "</tr></table>";    
+?>
 	</fieldset>
 	</form>
 	<form>
@@ -34,7 +48,3 @@
 	</div>
 	</body>
 </html>
-            
-            
-            
-    

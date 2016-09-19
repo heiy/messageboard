@@ -1,5 +1,5 @@
 <?php
-	class Msg_model extends CI_Model {
+	class Model_msg_model extends CI_Model {
 		public function __construct()
     {
 			$this->load->database();
